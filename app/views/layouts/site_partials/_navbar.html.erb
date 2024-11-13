@@ -3,7 +3,9 @@
         data-controller="navbar" 
         class="fixed top-0 z-50 w-full text-sm py-4 border-b-2 border-b-slate-900 bg-white">
   <nav class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between">
-    <a class="sm:order-1 flex-none text-3xl text-black font-bebas focus:outline-none focus:opacity-80" href="#">Copywriter</a>
+
+    <%= link_to "Copywriter", root_path, class: "sm:order-1 flex-none text-3xl text-black font-bebas focus:outline-none focus:opacity-80" %>
+
     <div class="sm:order-3 flex items-center gap-x-2">
 
       <button type="button" class="pt-[11px] pb-[12px] px-5 inline-flex items-center gap-x-2 text-sm font-medium rounded-md border border-slate-200 bg-white text-slate-800 shadow-sm hover:bg-slate-800 hover:text-sky-300 focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
@@ -21,7 +23,7 @@
       
     </div>
     <div class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow lg:grow-0 lg:basis-auto lg:block lg:order-2">
-      <div class="hidden lg:flex gap-5 items-center mt-0 p-1 border border-red-500 rounded-md">
+      <div class="hidden lg:flex gap-5 items-center mt-0 p-1 rounded-md">
         <%= link_to "Home", 
                     root_path, 
                     class: "pt-[11px] 
@@ -46,21 +48,92 @@
                             focus:text-sky-800",
                     aria: { label: "About Us" } %>
 
-        <%= link_to%>
-        <a class="pt-[11px] pb-[12px] px-2 font-medium text-slate-800 hover:text-sky-800 focus:outline-none focus:text-sky-800" href="#">Clients</a>
-        <a class="pt-[11px] pb-[12px] px-2 font-medium text-slate-800 hover:text-sky-800 focus:outline-none focus:text-sky-800" href="#">Reviews</a>
-        <a class="pt-[11px] pb-[12px] px-2 font-medium text-slate-800 hover:text-sky-800 focus:outline-none focus:text-sky-800" href="#">Our Work</a>
-        <a class="pt-[11px] pb-[12px] px-2 font-medium text-slate-800 hover:text-sky-800 focus:outline-none focus:text-sky-800" href="#">Job Opportunities</a>
-        <a class="pt-[11px] pb-[12px] px-2 font-medium text-slate-800 hover:text-sky-800 focus:outline-none focus:text-sky-800" href="#">Press</a>
+        <%= link_to "Clients",
+                    pages_client_path,
+                    class: "pt-[11px] 
+                            pb-[12px] 
+                            px-2 
+                            font-medium 
+                            text-slate-800 
+                            hover:text-sky-800 
+                            focus:outline-none 
+                            focus:text-sky-800",
+                    aria: { label: "Clients" } %>
+
+        <%= link_to "Reviews", 
+                    pages_review_path, 
+                    class: "pt-[11px] 
+                            pb-[12px] 
+                            px-2 
+                            font-medium 
+                            text-slate-800 
+                            hover:text-sky-800 
+                            focus:outline-none 
+                            focus:text-sky-800",
+                    aria: { label: "Reviews" } %>
+
+        <%= link_to "Our Work", 
+                    pages_work_path, 
+                    class: "pt-[11px] 
+                            pb-[12px] 
+                            px-2 
+                            font-medium 
+                            text-slate-800 
+                            hover:text-sky-800 
+                            focus:outline-none 
+                            focus:text-sky-800", 
+                    aria: { label: "Work" } %>
+
+        <%= link_to "Job Opportunities", 
+                    pages_job_path, 
+                    class: "pt-[11px] 
+                            pb-[12px] 
+                            px-2 
+                            font-medium 
+                            text-slate-800 
+                            hover:text-sky-800 
+                            focus:outline-none 
+                            focus:text-sky-800", 
+                    aria: { label: "Job Opportunities" } %>
+
+        <%= link_to "Press", 
+                      pages_press_path, 
+                      class: "pt-[11px] 
+                              pb-[12px] 
+                              px-2 
+                              font-medium 
+                              text-slate-800 
+                              hover:text-sky-800 
+                              focus:outline-none 
+                              focus:text-sky-800", 
+                              aria: { label: "Press" } %>
       </div>
     </div>
   </nav>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <nav class="hidden bg-white absolute w-2/3 right-2 overflow-y-auto rounded-b-sm" data-navbar-target="mobileMenu">
+  <nav class="hidden bg-white absolute w-2/3 sm:w-1/3 right-2 overflow-y-auto rounded-b-sm" data-navbar-target="mobileMenu">
     <ul class="flex flex-col py-2 px-3">
       <%= link_to root_path do %>
         <li class="flex border p-2 my-1 rounded-sm">Home</li>
+      <% end %>
+      <%= link_to pages_about_path do %>
+        <li class="flex border p-2 my-1 rounded-sm">About Us</li>
+      <% end %>
+      <%= link_to pages_client_path do %>
+        <li class="flex border p-2 my-1 rounded-sm">Clients</li>
+      <% end %>
+      <%= link_to pages_review_path do %>
+        <li class="flex border p-2 my-1 rounded-sm">Reviews</li>
+      <% end %>
+      <%= link_to pages_work_path do %>
+        <li class="flex border p-2 my-1 rounded-sm">Our Work</li>
+      <% end %>
+      <%= link_to pages_job_path do %>
+        <li class="flex border p-2 my-1 rounded-sm">Job Opportunities</li>
+      <% end %>
+      <%= link_to pages_press_path do %>
+        <li class="flex border p-2 my-1 rounded-sm">Press</li>
       <% end %>
     </ul>
   </nav>
