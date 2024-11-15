@@ -16,7 +16,7 @@
           </span>
           <div class="bg-green-200 p-2">
             <p class="py-2 mb-2">
-              What write copy that sells like toilet paper in a pandemic. Could you be our next success story?
+              We write copy that sells like toilet paper in a pandemic. Could you be our next success story?
             </p>
             <%= link_to "LKM Creative", "https://www.lkmcreative.com", target: "_blank", rel: "alternate", class: "p-2 font-bold bg-[#faff00] rounded-e-full" %>
             <p class="py-2 mt-2">
@@ -47,41 +47,87 @@
     </div>
   </div>
 </section>
-<section id="" class="w-full">
-  <div class="max-w-[85rem] w-full h-full mx-auto my-auto p-4">
-    <!-- link block for info / service-->
-    <div class=" ms-8 py-2">
-      <div class="flex w-full">
-        <div class="flex flex-col">
-          <h3 class="text-xl font-medium">Learn More -</h3>
-          <span class="ms-16">Xtra, Xtra. Read all about it.</span>
+<section id="quicklinks" class="w-full">
+  <div class="max-w-[85rem] w-full mx-auto my-auto lg:p-4">
+    <div class="flex-col md:flex md:flex-row w-full justify-center md:justify-around">
+      <!-- Left links wrapper-->
+      <div class="flex-col w-full md:w-1/2 justify-center items-center">
+        <!-- link block for info / service-->
+        <div class="flex justify-center items-center lg:justify-start lg:items-start">
+          <div class="flex lg:ms-6 xl:ms-12">
+            <%= link_to pages_about_path do %>
+              <div class="flex flex-col border border-sky-400 rounded-s-lg rounded-e-lg p-2 w-80">
+                <h3 class="text-xl font-medium">Learn More -</h3>
+                <span class="ms-8 text-sky-700">Xtra, Xtra. Read all about it.</span>
+              </div>
+            <% end %>
+            <div class="hidden lg:flex items-center ms-16 xl:ms-20">
+              <%= image_tag("bluediamond.svg", style: "width: 30px; height: 30px;", alt: "blue diamond illustration") %>
+            </div>
+          </div>
         </div>
-        <div class="flex items-center ms-24">
-          <%= image_tag("bluediamond.svg", style: "width: 30px; height: 30px;", alt: "blue diamond illustration") %>
+        <div class="flex justify-center items-center lg:justify-start lg:items-start">
+          <div class="flex py-4 lg:ms-6 xl:ms-16">
+            <%= link_to pages_about_path do %>
+              <div class="flex flex-col border border-sky-400 rounded-s-lg rounded-e-lg p-2 w-80">
+                <h3 class="text-xl font-medium">The Team -</h3>
+                <span class="ms-8 text-sky-700">See who are you working with?</span>
+              </div>
+            <% end %>
+            <div class="hidden lg:flex items-center ms-20 xl:ms-24">
+              <%= image_tag("redcircle.svg", style: "width: 30px; height: 30px;", alt: "red circle illustration") %>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center lg:justify-start lg:items-start">
+          <div class="flex lg:ms-6 xl:ms-20">
+            <%= link_to "https://www.fiverr.com/lkmcreative", target: "_blank", rel: "alternate" do %>
+              <div class="flex flex-col border border-sky-400 rounded-s-lg rounded-e-lg p-2 w-80">
+                <h3 class="text-xl font-medium">Order on Fiverr -</h3>
+                <span class="ms-8 text-sky-700">Professional, secure and perfect.</span>
+              </div>
+            <% end %>
+            <div class="hidden lg:flex items-center ms-24 xl:ms-28">
+              <%= image_tag("purpledodad.svg", style: "width: 30px; height: 30px;", alt: "purple polygon illustration") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copywrite desc intro block -->
+      <div class="flex-col w-full md:w-1/2 justify-center items-center">
+        <div class="my-12 px-4 sm:my-8 md:my-4 lg:my-0 lg:px-10">
+          <p class="text-center font-medium lg:text-xl xl:text-2xl">
+            What copywriting services team...can say they served 9,000+ clients?
+          </p>
+          <div class="flex justify-center items-center my-2">
+            <span class="text-center lg:text-xl xl:text-2xl py-2 px-6 font-bold bg-[#faff00] rounded-e-full border">
+              We can!
+            </span>
+          </div>
+          <p class="text-center lg:text-xl xl:text-2xl">
+            <span class="text-orange-600 font-medium">LKM Creative</span> is changing the way companies grow forever. Gone are the days of working with old-school agencies with outdated mindsets and slow processes.
+          </p>
         </div>
       </div>
     </div>
-    <div class="ms-16 py-2">
-      <div class="flex w-full">
-        <div class="flex flex-col">
-          <h3 class="text-xl font-medium">The Team -</h3>
-          <span class="ms-24">Who is that you want working with you.</span>
-        </div>
-        <div class="flex items-center ms-24">
-          <%= image_tag("redcircle.svg", style: "width: 30px; height: 30px;", alt: "red circle illustration") %>
-        </div>
-      </div>
+  </div>
+</section>
+<section id="" class="flex justify-center items-center w-full bg-yellow-500 my-16 px-4">
+  <div class="max-w-[45rem] w-full bg-white my-16 p-4 2xl:px-24 xl:py-16 rounded-lg">
+    <div class="flex justify-center items-center border rounded shadow-lg py-2 mb-4 bg-[url('https://images.pexels.com/photos/21380/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/RBtq_s91KAE?si=qHs3HFoKXE8eaaWW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <div class="ms-24 py-2">
-      <div class="flex w-full">
-        <div class="flex flex-col">
-          <h3 class="text-xl font-medium">Order on Fiverr -</h3>
-          <span class="ms-32">You deserve professional, secure and perfect.</span>
-        </div>
-        <div class="flex items-center ms-24">
-          <%= image_tag("purpledodad.svg", style: "width: 30px; height: 30px;", alt: "purple polygon illustration") %>
-        </div>
-      </div>
-    </div>
+    <p class="text-center lg:text-xl py-2">
+      We deliver 1000s of professional copywriting projects a year - from <span class="text-amber-600 font-medium">website copy</span> to <span class="text-amber-600 font-medium">brochure copy, blogs, articles, crowdfunding campaign copy, billboards, video scripts, TV ads, radio spots, explainer videos, mailers,</span> and so much <strong>more</strong> - with <strong>FAST</strong> turnarounds and unprecedented <strong>quality</strong>.
+    </p>
+    <p class="text-center lg:text-xl py-2">
+      We <span class="font-medium">GUARANTEE</span> <strong>professionalism, creativity,</strong> and 100% <strong>originality</strong>.
+    </p>
+    <p class="text-center lg:text-xl py-2">
+      Since 2015, we have worked with <span class="font-medium">THOUSANDS</span> of companies worldwide. No matter your business or industry, contact Shaun at shaun@lkmcreative.com to start your journey with <span class="text-orange-600 font-medium">LKM</span>. You'll soon see why we've worked with over 9,000+ clients and counting.
+    </p>
+    <p class="text-center lg:text-xl py-2">
+      The world <em>loves</em> <span class="text-orange-600 font-medium">LKM's</span> professional copywriting services, and it's not hard to see why...
+    </p>
   </div>
 </section>
