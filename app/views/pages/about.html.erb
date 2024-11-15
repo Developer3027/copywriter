@@ -1,4 +1,122 @@
-<div class="mt-24">
-  <h1 class="font-bold text-4xl">Pages#about</h1>
-  <p>Find me in app/views/pages/about.html.erb</p>
-</div>
+<section class="mt-24 w-full">
+  <div class="max-w-[85rem] w-full h-full mx-auto my-auto p-4">
+    <!-- 2 col section on desktop-->
+    <div class="flex-col md:flex md:flex-row w-full justify-center md:justify-around">
+      <!--lkm logo info block-->
+      <div class="flex justify-center items-center w-full md:w-1/2">
+        <div class="hidden lg:flex items-center min-w-fit">
+            <%= image_tag("bff425.png", style: "width: 300px; height: 220px;", alt: "l k m creative logo") %>
+        </div>
+        <div class="lg:ms-3">
+          <h1 class="text-4xl pb-4 sm:px-2 text-orange-600">
+            LKM Creative
+          </h1>
+          <span class="text-2xl ps-1 sm:px-2">
+            Writing WORDS that SELL!
+          </span>
+          <div class="bg-green-200 p-2">
+            <p class="py-2 mb-2">
+              We write copy that sells like toilet paper in a pandemic. Could you be our next success story?
+            </p>
+            <%= link_to "LKM Creative", "https://www.lkmcreative.com", target: "_blank", rel: "alternate", class: "p-2 font-bold bg-[#faff00] rounded-e-full" %>
+            <p class="py-2 mt-2">
+              Changing the way companies grow forever. Gone are the days of working with old-school agencies with outdated mindsets and slow processes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Copywrite desc intro block -->
+      <div class="flex flex-col w-full md:w-1/2 justify-center items-center">
+        <div class="my-12 px-4 sm:my-8 md:my-4 lg:my-0 lg:px-10">
+          <p class="text-center font-medium lg:text-xl xl:text-2xl">
+            What copywriting services team...can say they served 9,000+ clients?
+          </p>
+          <div class="flex justify-center items-center my-2">
+            <span class="text-center lg:text-xl xl:text-2xl py-2 px-6 font-bold bg-[#faff00] rounded-e-full border">
+              We can!
+            </span>
+          </div>
+          <p class="text-center lg:text-xl xl:text-2xl">
+            <span class="text-orange-600 font-medium">LKM Creative</span> is changing the way companies grow forever. Gone are the days of working with old-school agencies with outdated mindsets and slow processes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="" class="flex justify-center items-center w-full bg-yellow-500 my-8 lg:my-16 px-4">
+  <div class="max-w-[45rem] w-full bg-white my-16 p-4 2xl:px-24 xl:py-16 rounded-lg">
+    <h2 class="text-center text-3xl text-indigo-500 font-bold">About Us</h2>
+    <h3 class="text-center text-lg text-indigo-700 font-medium pb-4">Helping Businesses Grow Since 2015</h3>
+    <p class="text-center pb-4">
+      LKM Creative is a team of broadly expreienced copywriters, helping business grow all around the world - from our humble headquarters in Johannesburg, South Africa.
+    </p>
+    <h2 class="text-center text-3xl text-indigo-500 font-bold py-4">Our Story</h2>
+    <p class="text-center pb-4">
+      LKM (short for Lauren Kirsty Meikle) started when founder, Lauren, wanted to use her writing skills to make a difference for businesses far and wide - especially small teams in need of affordable copywriting to tell their story and increase online conversions.
+    </p>
+    <!-- YouTube video iframe-->
+    <div class="flex justify-center items-center border rounded shadow-lg py-2 mb-4">
+      <iframe width="560" height="315" src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/v1/video-attachments/seller_intro_video/attachment/68d4893946a4ec16beb20315a57e7380-1719574089101/New%20Fiverr%20Intro%20Video" title="Fiverr Intro Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="text-center pb-4">
+      As LKM Creative started to grow, Lauren could no longer work alone. And so, her husband, Shaun Gouws, took the reins as Producer and head of client communication. LKM's growth and popularity didn't slow down, and today, we are a humble 5-member team of creative minds who are passionate about telling stories.
+    </p>
+    <p class="text-center pb-4">
+      Based in Johannesburg, South Africa, we provide professional copywriting services for small-large businesses all over the world, from tiny start-ups to thriving Fortune 500s. From Honda to Emirates to the revolutionary quirky product ideas emerging every day, we do it all - and we can do it for you too.
+    </p>
+
+    <h2 class="text-center text-3xl text-indigo-500 font-bold py-4">Meet the Team</h2>
+    
+    <!---- Producer block -->
+    <div class="flex flex-col justify-center items-center py-2">
+      <!--card 1-->
+      <div class="flex w-full justify-center items-center py-4">
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
+          <%= image_tag("7014.jpg", class: "object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg", alt: "Lauren Gouws") %>
+          <div class="flex flex-col justify-between p-2 leading-normal">
+              <h5 class="text-lg font-bold tracking-tight text-gray-900 bg-rose-100 rounded-e-full">Lauren Gouws</h5>
+              <h6 class="font-medium">Founder</h6>
+              <p class="text-sm text-gray-700">
+                Lauren is a passionate wordsmith and Entrepreneur cover girl. Coupled with caffeine and a good night's sleep, her writing has been known to help businesses of all shapes and sizes increase their traffic online and off. When she's not working, Lauren enjoys spending time with her husband and daughter.
+              </p>
+          </div>
+        </div>
+      </div>
+      <!--card 2-->
+      <div class="flex w-full justify-center items-center py-4">
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
+          <%= image_tag("02121.jpg", class: "object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg", alt: "Shawn Gouws") %>
+          <div class="flex flex-col justify-between p-2 leading-normal">
+              <h5 class="text-lg font-bold tracking-tight text-gray-900 bg-teal-100 rounded-e-full">Shawn Gouws</h5>
+              <h6 class="font-medium">Producer</h6>
+              <p class="text-sm text-gray-700">
+                Your first point of communication, Shaun is an experienced industry producer who runs a tight ship at LKM. After years of experience producing countless TV commercials for big agencies and international brands, Shaun built LKM with Lauren to change the way companies commission copy.
+              </p>
+          </div>
+        </div>
+      </div>
+      <!--card 3-->
+      <div class="flex w-full justify-center items-center py-4">
+        <div class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
+          <%= image_tag("6a1e.jpg", class: "object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg", alt: "Warrick Bews") %>
+          <div class="flex flex-col justify-between p-2 leading-normal">
+              <h5 class="text-lg font-bold tracking-tight text-gray-900 bg-yellow-100 rounded-e-full">Warrick Bews</h5>
+              <h6 class="font-medium">Senior Copywriter</h6>
+              <p class="text-sm text-gray-700">
+                Constantly chasing the next version of himself, Warrick is passionate about learning and growing. With the wonder he finds in what words can achieve when amassed, Warrick spends his days rearranging the sentences in his head - translating them into stories on the page. 
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Highlighted link -->
+    <div class="flex justify-center items-center py-2">
+      <span class="before:block before:absolute before:-inset-1 before:-start-2 before:-end-2 before:rounded-sm before:bg-yellow-200 relative inline-block">
+        <span class="relative border border-slate-600 rounded-sm py-2 px-4">
+          <%= link_to "Ask a question", pages_contact_path, class: "font-medium" %>
+        </span>
+      </span>
+    </div>
+  </div>
+</section>
