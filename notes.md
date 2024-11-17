@@ -1,3 +1,4 @@
+<!--concept on home page -->
 <section id="" class="w-full">
   <div class="max-w-[85rem] w-full h-full mx-auto my-auto p-4">
     <div class="flex-col md:flex md:flex-row w-full justify-center md:justify-around">
@@ -63,6 +64,54 @@
         </div>
       </div>
       
+    </div>
+  </div>
+</section>
+
+<!-- pulled from top of about page -->
+<section class="mt-24 w-full">
+  <div class="max-w-[85rem] w-full h-full mx-auto my-auto p-4">
+    <!-- 2 col section on desktop-->
+    <div class="flex-col md:flex md:flex-row w-full justify-center md:justify-around">
+      <!--lkm logo info block-->
+      <div class="flex justify-center items-center w-full md:w-1/2">
+        <div class="hidden lg:flex items-center min-w-fit">
+            <%= image_tag("bff425.png", style: "width: 300px; height: 220px;", alt: "l k m creative logo") %>
+        </div>
+        <div class="lg:ms-3">
+          <h1 class="text-4xl pb-4 sm:px-2 text-orange-600">
+            LKM Creative
+          </h1>
+          <span class="text-2xl ps-1 sm:px-2">
+            Writing WORDS that SELL!
+          </span>
+          <div class="bg-green-200 p-2">
+            <p class="py-2 mb-2">
+              We write copy that sells like toilet paper in a pandemic. Could you be our next success story?
+            </p>
+            <%= link_to "LKM Creative", "https://www.lkmcreative.com", target: "_blank", rel: "alternate", class: "p-2 font-bold bg-[#faff00] rounded-e-full" %>
+            <p class="py-2 mt-2">
+              Changing the way companies grow forever. Gone are the days of working with old-school agencies with outdated mindsets and slow processes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Copywrite desc intro block -->
+      <div class="flex flex-col w-full md:w-1/2 justify-center items-center">
+        <div class="my-12 px-4 sm:my-8 md:my-4 lg:my-0 lg:px-10">
+          <p class="text-center font-medium lg:text-xl xl:text-2xl">
+            What copywriting services team...can say they served 9,000+ clients?
+          </p>
+          <div class="flex justify-center items-center my-2">
+            <span class="text-center lg:text-xl xl:text-2xl py-2 px-6 font-bold bg-[#faff00] rounded-e-full border">
+              We can!
+            </span>
+          </div>
+          <p class="text-center lg:text-xl xl:text-2xl">
+            <span class="text-orange-600 font-medium">LKM Creative</span> is changing the way companies grow forever. Gone are the days of working with old-school agencies with outdated mindsets and slow processes.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
