@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: .ruby-version
+        ruby-version: [3.3.0]
         database_name: [copywriter_test]
         database_host: [localhost]
         database_port: [5432]
