@@ -56,13 +56,13 @@ jobs:
   db_prepare:
     runs-on: ubuntu-latest
     strategy:
-    matrix:
-      ruby-version: .ruby-version
-      database_name: [copywriter_test]
-      database_host: [localhost]
-      database_port: [5432]
-      database_user: [postgres]
-      database_password: [postgres]
+      matrix:
+        ruby-version: .ruby-version
+        database_name: [copywriter_test]
+        database_host: [localhost]
+        database_port: [5432]
+        database_user: [postgres]
+        database_password: [postgres]
 
     services:
       postgres:
