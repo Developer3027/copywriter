@@ -53,3 +53,7 @@ jobs:
       - name: Lint code for consistent style
         run: bin/rubocop -f github
 
+  run:
+    name: Run system test
+    command: bin/rails test:system
+
