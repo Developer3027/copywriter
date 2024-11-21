@@ -53,23 +53,14 @@ jobs:
       - name: Lint code for consistent style
         run: bin/rubocop -f github
 
-  db_prepare:
+  system_test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ruby-version: [3.3.0]
-        database_name: [copywriter_test]
-        database_host: [localhost]
-        database_port: [5432]
-        database_user: [postgres]
-        database_password: [postgres]
-
     services:
       postgres:
-        image: postgres:latest
+        image: postgres:14
         env:
-          POSTGRES_USER: ${{ matrix.database_user }}
-          POSTGRES_PASSWORD: ${{ matrix.database_password }}
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
         ports:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
@@ -80,32 +71,24 @@ jobs:
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
-
-      - name: Build test database
-        env:
-          RAILS_ENV: test
-          DATABASE_NAME_TEST: ${{ matrix.database_name }}
-          DATABASE_HOST_TEST: ${{ matrix.database_host }}
-          DATABASE_PORT_TEST: ${{ matrix.database_port }}
-          DATABASE_USER_TEST: ${{ matrix.database_user }}
-          DATABASE_PASSWORD_TEST: ${{ matrix.database_password }} 
-        run: |
-          bin/rails db:prepare
-          bin/rails db:migrate
-          bin/rails db:seed
-
-  system_test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+        uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install
 
       - name: Run system test
-        run: bin/rails test:system
+        env:
+          DATABASE_URL: postgres://postgres:postgres@localhost:5432/copywriter_test
+          RAILS_ENV: test
+          RAILS_LOG_TO_STDOUT: enabled
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+        run: |
+          sudo apt-get install libpq-dev
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+          bin/rails db:prepare
+          bin/rails db:migrate
+          bin/rails test:system
 
