@@ -8,8 +8,8 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# Remove existing admins
-Admin.destroy_all
+# Remove existing Users
+User.destroy_all
 
-# Create default admin
-Admin.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+# Create default User
+User.create!(email: "user@example.com", password: "password", password_confirmation: "password")
