@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :admin, controllers: {
+    sessions: "admin/sessions"
+  }
+  namespace :admin do
+    resources :staff, only: [ :new, :create ]
+  end
+  devise_for :staffs, skip: [ :registrations ]
+
+  get "admin/admin"
+
   get "pages/about"
   get "pages/client"
   get "pages/review"
