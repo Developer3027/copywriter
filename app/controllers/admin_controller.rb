@@ -23,7 +23,7 @@ class AdminController < ApplicationController
   end
 
   def authenticate_admin
-    unless current_user&.admin?
+    unless current_admin
       redirect_to root_path, alert: "Only admins can access this page."
     end
   end

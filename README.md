@@ -4,11 +4,21 @@ Site and pwa app for a small copywriting team. Built on Rails made it easy to cr
 
 Designed in Figma and adapted as a rebuild for a specific copywriting team found through Fiverr, LKM Creative. Consider this project a fan site and references go directly to LKM Creative or specific members of the team via the site/app. Inquires into the site build or design are clearly marked. This site/app is intended to showcase my skills as a designer and Rails developer and should not reflect on LKM Creative.
 
-Admin can add, update, or remove a client that is listed on the client page. A client can have a image, a title, and a brief description.
+Site has two faces. Public face is the public web site that provides information and sells the company objective. The secure face is used internal for employees and clients. How that works:
+
+Any public visitor can complete the contact form. The information from the form is saved and accessed through an internal email service. The admin can create a ticket. The ticket will assign an employee and create a client account. An external email service is used to contact the potential client. The employee can complete the ticket through a conversation with the client, either email or phone. The client and employee can talk through the app. Client can accept or decline copy and make notes.
+
+Admin can manage site.
+
+Employee can review work load and send internal email to employees, talk with clients.
+
+Clients can review copies and talk with employee.
+
+Admin can add, update, or remove a client that is listed on the client page. A client can have a profile section that includes a image, a title, and a brief description.
 
 Admin can add, update, or delete a review. A review can have an avatar, full name, country, start rating, and content.
 
-Admin can add, update, or delete a job. A job has a title, description, minimum requirements.
+Admin can add, update, or delete a job / ticket. A job has a title, description, minimum requirements.
 
 Created an internal email service within the site for the team. Admin can manage team members for the internal mail of the site. 
 

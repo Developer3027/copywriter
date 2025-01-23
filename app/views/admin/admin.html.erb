@@ -3,7 +3,7 @@
   <p>Find me in app/views/admin/admin.html.erb</p>
 
   <div>
-    <%= form_with(model: @staff, url: admin_path) do |form| %>
+    <%= form_with(model: @staff) do |form| %>
   <div>
     <%= form.label :email %>
     <%= form.email_field :email %>
